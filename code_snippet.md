@@ -62,6 +62,10 @@ setTimeout(() => console.log(2), 0);
 Promise.resolve().then(() => console.log(3));
 setTimeout(() => console.log(4), 1);
 console.log(5);
+```
+---
+
+ ```js
 // Scenario 1:
 process.nextTick(() => console.log(6));
 // Scenario 2:
@@ -77,6 +81,10 @@ const fetchFromNetwork = () => {
   setTimeout(() => console.log(8), 500);
 };
 fetchFromNetwork();
+```
+---
+
+ ```js
 // Scenario 4:
 Promise.resolve().then(() => {
   console.log(9);
@@ -95,6 +103,10 @@ const someAsyncFunction = async () => {
   console.log(14);
 };
 someAsyncFunction();
+```
+---
+
+ ```js
 // Scenario 8:
 const complexPromiseChain = () => {
   Promise.resolve()
